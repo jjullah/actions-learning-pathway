@@ -25,7 +25,7 @@ jobs:
       - run: npm install
       - run: npm test
       - name: Adding markdown
-        run: echo '### Hello world! 🚀' >> $Test_STEP_SUMMARY
+        run: echo '### Hello world! 🚀' >> $GITHUB_STEP_SUMMARY
   deploy:
     needs: test
 
