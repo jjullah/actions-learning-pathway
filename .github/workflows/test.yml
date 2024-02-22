@@ -1,9 +1,10 @@
 name: console-log
 on: push
 jobs:
-  hello-world-job:
+  Console-Log:
     runs-on: ubuntu-latest
     steps:
-      - name: Check Out Repository Code
-        uses: actions/checkout@v3
-      - run: echo "$(cat hello_world.txt)"
+      - name: View context attributes
+        uses: actions/github-script@v7
+        with:
+          script: console.log(context)
