@@ -10,7 +10,7 @@ jobs:
         id: generate_number
         run: |
           echo "random_number=$(($RANDOM % 2))" >> $GITHUB_OUTPUT
-          echo "$random_number"
+          printf '%s\n' "$random_number"
 
       - name: Pass or fail
         run: |
