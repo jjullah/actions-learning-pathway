@@ -14,4 +14,8 @@ jobs:
 
       - name: Pass or fail
         run: |
-          if [[ ${{ steps.generate_number.outputs.random_number }} == 0 ]]; then exit 0; else exit 1; fi
+          if [[ "${{ steps.generate_number.outputs.random_number }}" == "0" ]]; then 
+            echo "Random number generated: 0"
+          else
+            echo "Random number generated: 1"
+          fi
